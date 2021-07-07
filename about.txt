@@ -1,1 +1,1 @@
-About this project
+This repository contains projects from the course Python Django - The Practical Guide

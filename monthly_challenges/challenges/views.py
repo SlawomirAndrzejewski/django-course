@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 
 monthly_challenges = {
-    'january': 'Eat no meat for the entire month!',
+    'january': None,
     'february': 'Walk for at least 20 minutes every day!',
     'march': 'Learn Django for at least 20 minutes every day!',
     'april': 'Eat no meat for the entire month!',

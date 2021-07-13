@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Poletko Sławomira
+{% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Poletko Blog</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Sławomir">
+            <h2>Poletko Sławomira Blog</h2>
+        </header>
+        <p>Hi, I am Sławomir, gardener.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>Latest Articles</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Tomatoes">
+                        <div class="post__content">
+                            <h3>Tomatoes</h3>
+                            <p>Theres nothing like tomatoes!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I love growing vegies, I love to help others and enjoy observing how everything grow.</p>
+        <p>My goal is to teach people how to grow own, healthly food for better living.</p>
+    </section>
+{% endblock %}

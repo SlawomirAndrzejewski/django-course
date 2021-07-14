@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+
+{% block title %}
+    Poletko Sławomira
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+    <h2>Post Title</h2>
+    <article>
+        <img src="{% static 'blog/images/traveler.jpg' %}" alt="Post Title">
+        <address>By Sławomir</address>
+        <div>
+            Last updated at <time>July 10th</time>
+        </div>
+    </article>
+</section>
+
+<main>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quod recusandae nobis vitae vero ducimus pariatur at facilis officiis, 
+    deleniti culpa mollitia tenetur maxime officia magni animi sed? Delectus, tenetur!
+    </p>
+</main>
+{% endblock %}

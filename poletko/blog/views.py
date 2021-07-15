@@ -18,11 +18,11 @@ all_posts = [
         '''
     },
     {
-        'slug': 'my-traveling',
+        'slug': 'my-vegies',
         'image': 'traveler.jpg',
         'author': 'Sławomir',
         'date': date(2021, 7, 14),
-        'title': 'My travels',
+        'title': 'My vegies',
         'excerpt': 'There is nothing like traveling!',
         'content': '''
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quod recusandae nobis vitae vero ducimus pariatur at facilis officiis, 
@@ -33,11 +33,11 @@ all_posts = [
         '''
     },
     {
-        'slug': 'my-traveling',
+        'slug': 'my-money',
         'image': 'traveler.jpg',
         'author': 'Sławomir',
         'date': date(2021, 7, 14),
-        'title': 'My travels',
+        'title': 'My money',
         'excerpt': 'There is nothing like traveling!',
         'content': '''
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quod recusandae nobis vitae vero ducimus pariatur at facilis officiis, 
@@ -64,8 +64,13 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request, 'blog/all-posts.html')
+    return render(request, 'blog/all-posts.html', {
+        'posts': all_posts
+    })
 
 
 def post_detail(request, slug):
-    return render(request, 'blog/post-detail.html')
+    identified_post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, 'blog/post-detail.html', {
+        'post': identified_post
+    })

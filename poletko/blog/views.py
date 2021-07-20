@@ -3,10 +3,6 @@ from datetime import date
 
 from .models import Post
 
-all_posts = [
-
-]
-
 def get_date(post):
     return post['date']
 
@@ -19,6 +15,7 @@ def starting_page(request):
 
 
 def posts(request):
+    all_posts = Post.objects.all().order_by
     return render(request, 'blog/all-posts.html', {
         'posts': all_posts
     })
